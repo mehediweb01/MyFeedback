@@ -1,11 +1,13 @@
 import "./App.css";
-import Navbar from "./component/shared/Navbar";
+import Topics from "./components/HomePage/Topics";
+import Navbar from "./components/shared/Navbar";
 
 function App() {
   return (
     <>
       <div>
         <Navbar />
+        <Topics />
       </div>
     </>
   );

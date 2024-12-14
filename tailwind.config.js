@@ -57,7 +57,7 @@ export default {
         EerieBlack: "#1E1E1E",
       },
       fontFamily: {
-        roboto: 'font-family: "Roboto", sans-serif',
+        roboto: '"Roboto", sans-serif',
       },
     },
   },
