@@ -4,8 +4,8 @@ import { IoHomeOutline } from "react-icons/io5";
 import { IoCarOutline } from "react-icons/io5";
 const Topics = () => {
   return (
-    <section className="px-4 py-2">
-      <div className="grid lg:grid-cols-12 md:grid-cols-8 sm:grid-cols-4 grid-cols-2 items-center justify-items-center sm:gap-0 gap-3">
+    <section className="px-2 py-2">
+      <div className="grid lg:grid-cols-12 md:grid-cols-8 sm:grid-cols-4 grid-cols-2 items-center justify-items-center sm:gap-0 gap-3 text-secondary-PhilippineGray">
         <div className="flex flex-col items-center">
           <img src="/All.png" alt="All" />
           <p className="text-[#AFAFAF] font-roboto text-base leading-4">All</p>
