@@ -1,7 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { TbWorld } from "react-icons/tb";
 import { CiSearch } from "react-icons/ci";
-import { Button } from "@/components/ui/button";
+import Buttons from "../common/Buttons";
 
 const Navbar = () => {
   return (
@@ -26,9 +26,7 @@ const Navbar = () => {
         </div>
         <div className="flex  items-center gap-3 ">
           <TbWorld className="h-6 w-6 " />
-          <Button className="bg-EerieBlack text-white rounded-full font-roboto text-base leading-4">
-            MyFeedback for business
-          </Button>
+          <Buttons>MyFeedback for business</Buttons>
         </div>
       </div>
     </section>

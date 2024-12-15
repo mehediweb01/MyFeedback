@@ -1,5 +1,5 @@
+import Buttons from "../common/Buttons";
 import Card from "../common/Card";
-import { Button } from "../ui/button";
 
 const Trends = () => {
   return (
@@ -16,9 +16,7 @@ const Trends = () => {
             Discover more cool restaurants
           </h4>
           <div className="flex justify-center mt-5">
-            <Button className="font-roboto text-xl leading-5 text-center text-white bg-primary rounded-full px-8 py-2">
-              Show more
-            </Button>
+            <Buttons className="bg-primary">Show more</Buttons>
           </div>
         </div>
       </div>
