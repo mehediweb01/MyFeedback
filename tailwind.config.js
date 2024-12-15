@@ -13,6 +13,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         EerieBlack: "#232323",
+        EerieBlack1E: "#1E1E1E",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
@@ -60,6 +61,9 @@ export default {
       fontFamily: {
         roboto: '"Roboto", sans-serif',
         lexend: '"Lexend", sans-serif',
+      },
+      fontSize: {
+        heading: "32px",
       },
     },
   },

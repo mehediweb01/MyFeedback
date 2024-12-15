@@ -38,23 +38,25 @@ const Card = ({ api, className, imageClass, titleClass, desClass }) => {
               {items.des}
             </p>
             <div className="flex justify-start items-center gap-3">
-              {Array.from(Array(items.rating).keys()).map((el) => (
+              {Array.from(Array(items.star).keys()).map((el) => (
                 <img src="/star.png" alt="" key={el} />
               ))}
-              <p
-                className={cn(
-                  "font-roboto font-semibold text-sm leading-4 text-EerieBlack"
-                )}
-              >
-                {items.rating}
-              </p>
-              <p
-                className={cn(
-                  "font-roboto font-semibold text-sm leading-4 text-[#7A7A7A]"
-                )}
-              >
-                {items.totalReviews}
-              </p>
+              <div className="flex">
+                <p
+                  className={cn(
+                    "font-roboto font-semibold text-sm leading-4 text-EerieBlack"
+                  )}
+                >
+                  {items.rating}
+                </p>
+                <p
+                  className={cn(
+                    "font-roboto font-semibold text-sm leading-4 text-[#7A7A7A]"
+                  )}
+                >
+                  {items.totalReviews}
+                </p>
+              </div>
             </div>
           </div>
         </div>
