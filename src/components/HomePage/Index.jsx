@@ -1,3 +1,4 @@
+import Footer from "../shared/Footer";
 import MyCarousel from "./Carousel";
 import Feedback from "./Feedback";
 import Reviews from "./Reviews";
@@ -12,6 +13,7 @@ const Index = () => {
       <Trends />
       <Feedback />
       <Reviews />
+      <Footer />
     </>
   );
 };

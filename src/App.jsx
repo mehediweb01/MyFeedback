@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Index from "./components/HomePage/Index";
-import Footer from "./components/shared/Footer";
 import Navbar from "./components/shared/Navbar";
+import AllRestaurant from "./components/AllRestaurant/AllRestaurant";
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/AllRestaurant" element={<AllRestaurant />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </>
   );
