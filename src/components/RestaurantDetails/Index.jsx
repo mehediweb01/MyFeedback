@@ -1,5 +1,6 @@
 import Footer from "../shared/Footer";
 import Breadcrumbs from "./Breadcrumb";
+import Discover from "./Discover";
 import Hero from "./Hero";
 import Information from "./Information";
 import Magnificent from "./Magnificent";
@@ -16,6 +17,7 @@ const IndexRes = () => {
         <Information />
         <OverAllRating />
         <Reviews />
+        <Discover />
       </div>
       <Footer />
     </>
