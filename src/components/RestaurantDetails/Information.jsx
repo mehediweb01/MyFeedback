@@ -1,3 +1,12 @@
+import MenuCard from "./MenuCard";
+import { RxCrossCircled } from "react-icons/rx";
+import {
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogTrigger,
+} from "@radix-ui/react-alert-dialog";
+
 const Information = () => {
   const socialIcons = [
     {
@@ -24,12 +33,19 @@ const Information = () => {
             <div className="space-y-6">
               <div className="flex gap-3 items-center">
                 <img src="/spon.png" alt="" />
-                <a
-                  href="#"
-                  className="border-b border-gray-800 font-roboto text-xl leading-6 text-EerieBlack"
-                >
-                  See the menu
-                </a>
+                <AlertDialog>
+                  <AlertDialogTrigger asChild>
+                    <button className="border-b border-gray-800 font-roboto text-xl leading-6 text-EerieBlack">
+                      See the menu
+                    </button>
+                  </AlertDialogTrigger>
+                  <AlertDialogContent className="relative">
+                    <AlertDialogCancel className="absolute -right-10 top-0">
+                      <RxCrossCircled className="h-10 w-10" />
+                    </AlertDialogCancel>
+                    <MenuCard />
+                  </AlertDialogContent>
+                </AlertDialog>
               </div>
               <div className="flex gap-3 items-center">
                 <img src="/call.png" alt="" />
