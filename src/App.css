@@ -8,3 +8,9 @@ button.slick-arrow.slick-next {
 button.slick-arrow.slick-prev {
   @apply bg-primary rounded-2xl;
 }
+.active {
+  @apply text-primary-blue border-b-2 border-primary-blue;
+}
+.active p {
+  @apply text-primary-blue;
+}

@@ -2,6 +2,7 @@ import { IoRestaurantOutline } from "react-icons/io5";
 import { RiHotelLine } from "react-icons/ri";
 import { IoHomeOutline } from "react-icons/io5";
 import { IoCarOutline } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 const Topics = () => {
   return (
     <section className="px-2 py-2">
@@ -10,11 +11,13 @@ const Topics = () => {
           <img src="/All.png" alt="All" />
           <p className="text-[#AFAFAF] font-roboto text-base leading-4">All</p>
         </div>
-        <div className="flex flex-col items-center">
-          <IoRestaurantOutline className="w-[26px] h-[23px]" />
-          <p className="text-[#AFAFAF] font-roboto text-base leading-4">
-            Restaurants
-          </p>
+        <div>
+          <NavLink to="/" className={"flex flex-col items-center"}>
+            <IoRestaurantOutline className="w-[26px] h-[23px]" />
+            <p className="text-[#AFAFAF] font-roboto text-base leading-4 ">
+              Restaurants
+            </p>
+          </NavLink>
         </div>
         <div className="flex flex-col items-center">
           <RiHotelLine className="w-[26px] h-[23px]" />
