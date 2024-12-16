@@ -1,7 +1,7 @@
 import { LuUserRound } from "react-icons/lu";
 const ReviewCard = ({ items }) => {
   return (
-    <div className="flex items-start gap-2 w-fit p-4 rounded-lg ">
+    <div className="flex items-start gap-2 w-full p-4 rounded-2xl bg-[#F8F8F8]">
       <div className="bg-gray-100 rounded-full p-1">
         <LuUserRound className="h-8 w-8" />
       </div>
