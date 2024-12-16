@@ -11,7 +11,18 @@ import {
 const footerItems = [
   {
     about: [
-      { title: "About", link: ["About MyFeedback", "Investor Relations"] },
+      {
+        title: "About",
+        link: [
+          "About MyFeedback",
+          "Investor Relations",
+          "Trust & Safety",
+          "Content Guidelines",
+          "Terms of Service",
+          "Privacy Policy",
+          "Your Privacy Choices",
+        ],
+      },
     ],
     feedback: [
       {
@@ -50,14 +61,14 @@ const Footer = () => {
         <div>
           {about.map((item, i) => (
             <div key={i}>
-              <h1 className="font-lexend font-extrabold text-xl leading-6 text-EerieBlack1E mb-1">
+              <h1 className="font-lexend font-extrabold text-xl leading-6 text-EerieBlack1E mb-3">
                 {item.title}
               </h1>
               <div>
                 {item.link.map((items, i) => (
                   <p
                     key={i}
-                    className="font-roboto text-sm leading-4 text-[#5E5E5E] mb-1"
+                    className="font-roboto text-sm leading-4 text-[#5E5E5E] mb-2"
                   >
                     {items}
                   </p>
@@ -69,14 +80,14 @@ const Footer = () => {
         <div>
           {feedback.map((item, i) => (
             <div key={i}>
-              <h1 className="font-lexend font-extrabold text-xl leading-6 text-EerieBlack1E mb-1">
+              <h1 className="font-lexend font-extrabold text-xl leading-6 text-EerieBlack1E mb-3">
                 {item.title}
               </h1>
               <div>
                 {item.link.map((items, i) => (
                   <p
                     key={i}
-                    className="font-roboto text-sm leading-4 text-[#5E5E5E] mb-1"
+                    className="font-roboto text-sm leading-4 text-[#5E5E5E] mb-2"
                   >
                     {items}
                   </p>
@@ -136,7 +147,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p className="font-roboto font-semibold text-sm leading-4 text-EerieBlack1E text-center py-4 px-3">
+        <p className="font-roboto font-semibold text-sm leading-4 text-EerieBlack1E text-center pb-5 px-3">
           Septembre 2024 myfeedback, designed by scott
         </p>
       </div>
