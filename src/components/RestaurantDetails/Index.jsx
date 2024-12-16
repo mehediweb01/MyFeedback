@@ -1,6 +1,7 @@
 import Footer from "../shared/Footer";
 import Breadcrumbs from "./Breadcrumb";
 import Hero from "./Hero";
+import Information from "./Information";
 import Magnificent from "./Magnificent";
 
 const IndexRes = () => {
@@ -10,6 +11,7 @@ const IndexRes = () => {
         <Breadcrumbs />
         <Hero />
         <Magnificent />
+        <Information />
       </div>
       <Footer />
     </>
