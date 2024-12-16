@@ -57,6 +57,7 @@ export default {
       backgroundColor: {
         primary: "#1677BD",
         EerieBlack: "#1E1E1E",
+        cardBg: "#F8F8F8",
       },
       fontFamily: {
         roboto: '"Roboto", sans-serif',
@@ -67,5 +68,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
