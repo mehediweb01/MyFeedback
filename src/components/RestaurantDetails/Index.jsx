@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Information from "./Information";
 import Magnificent from "./Magnificent";
 import OverAllRating from "./OverAllRating";
+import Reviews from "./Reviews";
 
 const IndexRes = () => {
   return (
@@ -14,6 +15,7 @@ const IndexRes = () => {
         <Magnificent />
         <Information />
         <OverAllRating />
+        <Reviews />
       </div>
       <Footer />
     </>
