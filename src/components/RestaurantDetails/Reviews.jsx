@@ -15,28 +15,28 @@ const review = [
     name: "Mei Ling",
     location: "Singapore, Orchad boulevard",
     date: "09/05/2023",
-    star: 5,
+    star: 3,
     des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
   },
   {
     name: "Wei Xiong",
     location: "Singapore, Takashimaya",
     date: "01/05/2023",
-    star: 5,
+    star: 4,
     des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
   },
   {
     name: "Ming Wei",
     location: "Singapore, Little india",
     date: "31/04/2023",
-    star: 5,
+    star: 3,
     des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
   },
   {
     name: "Xin Yi",
     location: "Singapore, Zen rooms",
     date: "30/04/2023",
-    star: 5,
+    star: 2,
     des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
   },
   {
@@ -50,7 +50,7 @@ const review = [
     name: "Li Hua",
     location: "Singapore, DLLM loklok",
     date: "24/03/2023",
-    star: 5,
+    star: 1,
     des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
   },
   {
@@ -71,11 +71,16 @@ const review = [
 const Reviews = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenSort, setIsOpenSort] = useState(false);
+  const [data, setData] = useState(review);
   const handleOpenFilter = () => {
     setIsOpen(!isOpen);
   };
   const handleOpenSort = () => {
     setIsOpenSort(!isOpenSort);
+  };
+  const filteredItems = (rating) => {
+    const fil = [...review].filter((el) => el.star === rating);
+    return setData(fil);
   };
   return (
     <>
@@ -96,13 +101,18 @@ const Reviews = () => {
           </button>
         </div>
         <div>
-          {isOpen ? <FilterCard handleOpen={handleOpenFilter} /> : null}
+          {isOpen ? (
+            <FilterCard
+              handleOpen={handleOpenFilter}
+              filteredItems={filteredItems}
+            />
+          ) : null}
         </div>
         <div>
           {isOpenSort ? <SortCard handleOpen={handleOpenSort} /> : null}
         </div>
         <div className="mt-8 space-y-3">
-          {review.map((items, i) => (
+          {data.map((items, i) => (
             <ReviewCard key={i} items={items} />
           ))}
         </div>

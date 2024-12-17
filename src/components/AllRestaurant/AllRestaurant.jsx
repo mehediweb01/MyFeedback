@@ -29,8 +29,6 @@ const AllRestaurant = () => {
   const nextPage = () => {
     return navigate("/BellaItalia");
   };
-
-  // রেটিং অনুসারে সাজানোর ফাংশন
   const sortByRating = () => {
     const sorted = [...sortedProducts].sort((a, b) => b.star - a.star);
     setSortedProducts(sorted);
