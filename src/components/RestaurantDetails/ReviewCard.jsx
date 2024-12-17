@@ -20,7 +20,7 @@ const ReviewCard = ({ items }) => {
             {items.date}
           </p>
         </div>
-        <p className="font-roboto text-base leading-[18px] max-w-md text-[#5E5E5E] pt-4">
+        <p className="font-roboto text-base leading-[18px] w-full sm:max-w-md text-[#5E5E5E] pt-4">
           {items.des}
         </p>
       </div>

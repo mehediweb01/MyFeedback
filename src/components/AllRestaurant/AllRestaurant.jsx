@@ -5,15 +5,19 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Buttons from "../common/Buttons";
 import { useState } from "react";
 import SortCard from "./SortCard";
 import Card from "../common/Card";
 const AllRestaurant = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
     setIsOpen(!isOpen);
+  };
+  const nextPage = () => {
+    return navigate("/BellaItalia");
   };
   return (
     <section className="w-[95%] mx-auto my-6">
@@ -61,8 +65,9 @@ const AllRestaurant = () => {
             <div className="my-8 space-y-5 border-b">
               <Card
                 api="./allRestaurant.json"
-                className="flex flex-col sm:flex-row gap-2 border-b border-[#DCDCDC]"
+                className="flex flex-col sm:flex-row gap-2 border-b border-[#DCDCDC] hover:cursor-pointer"
                 imageClass="w-[209px] h-[189px]"
+                onClick={nextPage}
               />
             </div>
             <Buttons className="bg-primary">Show more</Buttons>

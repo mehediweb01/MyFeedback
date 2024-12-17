@@ -1,12 +1,5 @@
 import MenuCard from "./MenuCard";
-import { RxCrossCircled } from "react-icons/rx";
-import {
-  AlertDialog,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogTrigger,
-} from "@radix-ui/react-alert-dialog";
-
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const Information = () => {
   const socialIcons = [
     {
@@ -25,7 +18,7 @@ const Information = () => {
   return (
     <>
       <section className="w-[80%] mx-auto mt-12 sm:mt-24 mb-8">
-        <div className="flex flex-col-reverse sm:flex-row items-start justify-between gap-4 ">
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-4 ">
           <div className="space-y-12">
             <h1 className="font-lexend font-semibold text-xl sm:text-[34px]  leading-7 sm:leading-[42px]">
               More informations
@@ -33,19 +26,16 @@ const Information = () => {
             <div className="space-y-6">
               <div className="flex gap-3 items-center">
                 <img src="/spon.png" alt="" />
-                <AlertDialog>
-                  <AlertDialogTrigger asChild>
+                <Dialog>
+                  <DialogTrigger asChild>
                     <button className="border-b border-gray-800 font-roboto text-xl leading-6 text-EerieBlack">
                       See the menu
                     </button>
-                  </AlertDialogTrigger>
-                  <AlertDialogContent className="relative">
-                    <AlertDialogCancel className="absolute -right-10 top-0">
-                      <RxCrossCircled className="h-10 w-10" />
-                    </AlertDialogCancel>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[425px]">
                     <MenuCard />
-                  </AlertDialogContent>
-                </AlertDialog>
+                  </DialogContent>
+                </Dialog>
               </div>
               <div className="flex gap-3 items-center">
                 <img src="/call.png" alt="" />

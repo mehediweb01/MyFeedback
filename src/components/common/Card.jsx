@@ -1,7 +1,14 @@
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
-const Card = ({ api, className, imageClass, titleClass, desClass }) => {
+const Card = ({
+  api,
+  className,
+  imageClass,
+  titleClass,
+  desClass,
+  onClick,
+}) => {
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch(api)
@@ -14,6 +21,7 @@ const Card = ({ api, className, imageClass, titleClass, desClass }) => {
         <div
           key={items.id}
           className={cn("flex flex-col gap-3 rounded-xl", className)}
+          onClick={onClick}
         >
           <img
             src={items.image}
