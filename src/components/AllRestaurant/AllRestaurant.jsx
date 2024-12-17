@@ -8,7 +8,7 @@ import {
 import { NavLink, useNavigate } from "react-router-dom";
 import Buttons from "../common/Buttons";
 import { useState } from "react";
-import SortCard from "./SortCard";
+import SortCard from "../common/SortCard";
 import Card from "../common/Card";
 const AllRestaurant = () => {
   const navigate = useNavigate();

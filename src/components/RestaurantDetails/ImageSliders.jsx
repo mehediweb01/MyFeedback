@@ -42,7 +42,7 @@ const ImageSliders = () => {
           alt=""
         />
       </div>
-      <div className="absolute bottom-[34%] left-[25%] flex items-center gap-8 justify-center">
+      <div className="absolute bottom-[34%] left-[10%] sm:left-[25%] flex items-center gap-8 justify-center">
         <button
           type="button"
           onClick={handlePrev}
@@ -52,16 +52,14 @@ const ImageSliders = () => {
         </button>
         <div className="flex items-center gap-3">
           {imageLink.map((_, index) => (
-            <>
-              <button
-                key={index}
-                type="button"
-                onClick={() => handleDotClick(index)}
-                className={`w-3 h-3 rounded-full ${
-                  currentIndex === index ? "bg-white " : "bg-white/25 "
-                }`}
-              ></button>
-            </>
+            <button
+              key={index}
+              type="button"
+              onClick={() => handleDotClick(index)}
+              className={`w-3 h-3 rounded-full ${
+                currentIndex === index ? "bg-white " : "bg-white/25 "
+              }`}
+            ></button>
           ))}
         </div>
         <button

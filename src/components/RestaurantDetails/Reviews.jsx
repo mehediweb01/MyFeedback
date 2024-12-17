@@ -1,5 +1,8 @@
+import { useState } from "react";
 import Buttons from "../common/Buttons";
 import ReviewCard from "./ReviewCard";
+import FilterCard from "./FilerCard";
+import SortCard from "../common/SortCard";
 const review = [
   {
     name: "Wei Jie",
@@ -66,17 +69,37 @@ const review = [
   },
 ];
 const Reviews = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenSort, setIsOpenSort] = useState(false);
+  const handleOpenFilter = () => {
+    setIsOpen(!isOpen);
+  };
+  const handleOpenSort = () => {
+    setIsOpenSort(!isOpenSort);
+  };
   return (
     <>
       <hr className="w-full h-[1px] bg-[#D3D3D3]" />
       <section className="w-[80%] mx-auto my-16">
         <div className="flex gap-8 items-center">
-          <Buttons className="bg-white text-EerieBlack border border-EerieBlack hover:bg-gray-300">
+          <button
+            className="bg-white text-EerieBlack border border-EerieBlack hover:bg-gray-300 px-6 py-2 rounded-full flex items-center gap-2"
+            onClick={handleOpenFilter}
+          >
             <img src="/filter.png" alt="" /> filter
-          </Buttons>
-          <Buttons className="bg-white text-EerieBlack border border-EerieBlack hover:bg-gray-300">
+          </button>
+          <button
+            className="bg-white text-EerieBlack border border-EerieBlack hover:bg-gray-300 px-6 py-2 rounded-full flex items-center gap-2"
+            onClick={handleOpenSort}
+          >
             <img src="/sort.png" alt="" /> Sort
-          </Buttons>
+          </button>
+        </div>
+        <div>
+          {isOpen ? <FilterCard handleOpen={handleOpenFilter} /> : null}
+        </div>
+        <div>
+          {isOpenSort ? <SortCard handleOpen={handleOpenSort} /> : null}
         </div>
         <div className="mt-8 space-y-3">
           {review.map((items, i) => (

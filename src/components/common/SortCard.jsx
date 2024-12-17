@@ -2,7 +2,7 @@ import { RxCross2 } from "react-icons/rx";
 
 const SortCard = ({ handleOpen }) => {
   return (
-    <div className="bg-white shadow-md p-8 rounded-md border border-[#E6E6E6] relative flex flex-col items-center gap-5">
+    <div className="bg-white shadow-md p-8 rounded-md border border-[#E6E6E6] relative flex flex-col items-center gap-5 w-fit ms-16">
       <div className="absolute top-2 right-2">
         <button type="button" onClick={handleOpen}>
           <RxCross2 />
