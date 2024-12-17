@@ -82,6 +82,17 @@ const Reviews = () => {
     const fil = [...review].filter((el) => el.star === rating);
     return setData(fil);
   };
+  const sortByRatingHighToLow = () => {
+    const sorted = [...review].sort((a, b) => b.star - a.star);
+    setData(sorted);
+  };
+  const sortByRatingLowToHigh = () => {
+    const sorted = [...review].sort((a, b) => a.star - b.star);
+    setData(sorted);
+  };
+  const defaultSort = () => {
+    setData(review);
+  };
   return (
     <>
       <hr className="w-full h-[1px] bg-[#D3D3D3]" />
@@ -109,7 +120,14 @@ const Reviews = () => {
           ) : null}
         </div>
         <div>
-          {isOpenSort ? <SortCard handleOpen={handleOpenSort} /> : null}
+          {isOpenSort ? (
+            <SortCard
+              handleOpen={handleOpenSort}
+              sortedhightolow={sortByRatingHighToLow}
+              sortByRatinglowtohigh={sortByRatingLowToHigh}
+              defaultSort={defaultSort}
+            />
+          ) : null}
         </div>
         <div className="mt-8 space-y-3">
           {data.map((items, i) => (

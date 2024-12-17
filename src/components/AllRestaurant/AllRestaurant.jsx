@@ -12,6 +12,7 @@ import SortCard from "../common/SortCard";
 import Card from "../common/Card";
 const AllRestaurant = () => {
   const [sortedProducts, setSortedProducts] = useState([]);
+  const [defaultSort, setDefaultSort] = useState([]);
   useEffect(() => {
     fetch("./allRestaurant.json")
       .then((res) => {
@@ -19,6 +20,15 @@ const AllRestaurant = () => {
       })
       .then((data) => {
         setSortedProducts(data);
+      });
+  }, []);
+  useEffect(() => {
+    fetch("./allRestaurant.json")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setDefaultSort(data);
       });
   }, []);
   const navigate = useNavigate();
@@ -36,6 +46,9 @@ const AllRestaurant = () => {
   const sortByRatinglowtohigh = () => {
     const sorted = [...sortedProducts].sort((a, b) => a.star - b.star);
     setSortedProducts(sorted);
+  };
+  const defaultSortByRating = () => {
+    setSortedProducts(defaultSort);
   };
 
   return (
@@ -83,6 +96,7 @@ const AllRestaurant = () => {
                     handleOpen={handleOpen}
                     sortedhightolow={sortByRating}
                     sortByRatinglowtohigh={sortByRatinglowtohigh}
+                    defaultSort={defaultSortByRating}
                   />
                 ) : null}
               </div>
