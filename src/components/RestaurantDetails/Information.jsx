@@ -1,3 +1,4 @@
+import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
 import MenuCard from "./MenuCard";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const Information = () => {
@@ -33,7 +34,9 @@ const Information = () => {
                     </button>
                   </DialogTrigger>
                   <DialogContent className="sm:max-w-[425px]">
+                    <DialogTitle></DialogTitle>
                     <MenuCard />
+                    <DialogDescription></DialogDescription>
                   </DialogContent>
                 </Dialog>
               </div>
